@@ -1,4 +1,5 @@
 <template>
+
     <section>
         <Bar
         :chart-options="chartOptions"
@@ -10,7 +11,7 @@
         :styles="styles"
         :width="width"
         :height="height"
-    />
+      />
     </section>
 </template>
 <script>
@@ -35,11 +36,26 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 
 export default defineComponent({
-  name: 'ResultSection',
+  name: 'ResultSectionBalance',
   components: {
     Bar
   },
+
+  // created(){
+  //   console.log(this.asset_data_date)
+  //   console.log(this.asset_data_bal_qty)
+  // },
+
+ 
+  
   props: {
+    asset_data_date: {
+      type: Array,
+    },
+    asset_data_bal_qty: {
+      type: Array,
+    },
+
     chartId: {
       type: String,
       default: 'bar-chart'
@@ -68,25 +84,12 @@ export default defineComponent({
 
   setup(props) {
     const chartData = {
-      labels: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-      ],
+      labels: props.asset_data_date,
       datasets: [
         {
-          label: 'Data One',
+          label: 'Balance Qty',
           backgroundColor: '#f87979',
-          data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+          data: props.asset_data_bal_qty
         }
       ]
     }
@@ -115,10 +118,10 @@ export default defineComponent({
     section{
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
-    .data-container{
-        width: 100%;
-        height: 100%;
-    }
 </style>

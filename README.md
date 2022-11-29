@@ -28,7 +28,7 @@
 
 ## Como Utilizar
 
-Para clonar e executar esta aplicação, você precisará do [Git](https://git-scm.com) e [Node.js](https://nodejs.org/en/download/) (que vem com [ npm](http://npmjs.com)) instalado em seu computador. Passo a passo de execução:
+Para clonar e executar esta aplicação, você precisará do Composer para a utilização do Laravel, [Git](https://git-scm.com) e [Node.js](https://nodejs.org/en/download/) (que vem com [ npm](http://npmjs.com)) instalado em seu computador. Passo a passo de execução:
 
 ```bash
 # Clonar Repositório

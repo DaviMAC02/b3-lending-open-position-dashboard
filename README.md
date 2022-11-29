@@ -20,7 +20,7 @@
 ## Funcionalidaes
 
 * Download
-  - Download de informações dos indicadores de Posições em Aberto de Empréstimo de Ativos do site da B3
+  - Download das informações a respeito das Posições em Aberto de Empréstimo de Ativos do site da B3
 
 * Vizualização
   - Vizualização dos dados baixados através de gráficos indicativos.

@@ -16,5 +16,17 @@ class AssetController extends Controller
 
         return response()->json($assets);
     }
+
+    public function indexAllAssets()
+    {
+        $assets_info = Asset::where('date', '=', '2022-11-24')->get();
+        $assets = [];
+        for($i = 0; $i < count($assets_info); $i++){
+            $assets[$i] = $assets_info[$i]->Asst;
+        }
+
+        return response()->json($assets);
+
+    }
     
 }

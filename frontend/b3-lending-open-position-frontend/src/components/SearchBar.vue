@@ -1,16 +1,16 @@
 <template>
     <div class="search-bar">
         <form action="#" type="submit" v-on:submit.prevent="buscar">
-            <label>Ativo</label>
+            <label>Ativo:</label>
                 <select name="asset_selector" id="asset_selector">
                     <option v-for="option in options">
                         {{ option }}
                     </option>
                 </select>
 
-            <label>Data Inicial</label>
+            <label>Data Inicial:</label>
                 <input type="date" name="inicial_date" id="inicial_date" />
-                <label>Data Final</label>
+                <label>Data Final:</label>
                 <input type="date" name="final_date" id="final_date" />
             <button>Buscar</button>
         </form>
@@ -71,5 +71,28 @@
         align-items: center;
         justify-content: center;
         color: #fff;
+    }
+
+    form select, input{
+        width: 120px;
+        height: 40px;
+        margin: 0 10px;
+        border: 1px solid rgb(40, 53, 67);
+        border-radius: 5px;
+    }
+
+    button{
+        width: 100px;
+        height: 40px;
+        margin: 0 10px;
+        border: 1px solid rgb(40, 53, 67);
+        border-radius: 5px;
+        background-color: rgb(29,38,50);
+        color: #fff;
+    }
+
+    button:hover{
+        background-color: rgb(40, 53, 67);
+        cursor: pointer;
     }
 </style>

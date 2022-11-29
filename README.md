@@ -34,18 +34,17 @@ Para clonar e executar esta aplicação, você precisará do Composer para a uti
 # Clonar Repositório
 $ git clone https://github.com/DaviMAC02/b3-lending-open-position-dashboard.git
 
-# Entre na pasta frontend/b3-lendig-open-position-frontend e rodar
-npm install
-
 # Assegurar que tenha um banco de dados mySQL com o nome b3_jumba_db e seu respectivo servidor rodando
 
 # Download backend
+* Entrar na pasta backend/b3-lending-open-position-backend
 $ composer install
-(Entrar no banco de dados e inserir na tabela uptodatetrack a última data em que o download foi feito para o algoritmo saber de onde começar)
+* Entrar no banco de dados e inserir na tabela uptodatetrack a última data em que o download foi feito para o algoritmo saber de onde começar
 $ php artisan migrate
 $ php artisan serve
 $ php artisan download:b3
 Irá baixar todos os dados da tabela da B3 desde a última execução.
 
 #Frontend
+npm install (para instalar as dependencias)
 Na pasta principal rodar npm run serve (manter o servidor backend rodando)

@@ -40,6 +40,8 @@ npm install
 # Assegurar que tenha um banco de dados mySQL com o nome b3_jumba_db e seu respectivo servidor rodando
 
 # Download backend
+$ composer install
+(Entrar no banco de dados e inserir na tabela uptodatetrack a última data em que o download foi feito para o algoritmo saber de onde começar)
 $ php artisan migrate
 $ php artisan serve
 $ php artisan download:b3

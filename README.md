@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">Aplicação desenvolvida para baixar e apresentar de modo qualitativo dados do site da B3, mais especificamente do indicador de Posições em Aberto de Empréstimo de Ativos.</h4>
+<h4 align="center">Aplicação desenvolvida para baixar e apresentar de modo qualitativo dados do site da B3, mais especificamente da parte de Posições em Aberto de Empréstimo de Ativos.</h4>
 
 
 <p align="center">

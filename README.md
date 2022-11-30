@@ -46,5 +46,5 @@ $ php artisan download:b3
 Irá baixar todos os dados da tabela da B3 desde a última execução.
 
 #Frontend
-npm install (para instalar as dependencias)
+npm install --force (para instalar as dependencias, houve um pequeno conflito entre as dependências que será resolvido em uma versão furura, por isso a --force flag)
 Na pasta principal rodar npm run serve (manter o servidor backend rodando)

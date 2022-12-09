@@ -22,9 +22,9 @@ export default defineComponent({
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(31, 41, 55);
+  background-color: white;
   font-family: Nunito, sans-serif;
-  color: #fff;
+  color: black;
   font-weight: 400;
 
 }

@@ -77,7 +77,7 @@
         width: 120px;
         height: 40px;
         margin: 0 10px;
-        border: 1px solid rgb(40, 53, 67);
+        border: 1px solid #002c62;
         border-radius: 5px;
     }
 
@@ -85,14 +85,14 @@
         width: 100px;
         height: 40px;
         margin: 0 10px;
-        border: 1px solid rgb(40, 53, 67);
+        border: 1px solid #002c62;
         border-radius: 5px;
-        background-color: rgb(29,38,50);
+        background-color: #002c62;
         color: #fff;
     }
 
     button:hover{
-        background-color: rgb(40, 53, 67);
+        background-color: #002c62;
         cursor: pointer;
     }
 </style>

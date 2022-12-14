@@ -21,6 +21,7 @@ class VerifyExpectedDataTest extends TestCase
     public function test_expected_asset()
     {
         
+        // Test dataset
         $asset_test_dataset = [
             ["JPMC", "592346,79", "2022-12-12", "JPMC34", "BRJPMCBDR009", "10644", "68,0968799", "1"], 
             ["AAPL", "30284901,25", "2022-12-05", "AAPL34", "BRAAPLBDR004", "790813", "39,0682148", "1"],
@@ -29,14 +30,16 @@ class VerifyExpectedDataTest extends TestCase
             ["ANIM", "11046218,66", "2022-11-22", "ANIM3", "BRANIMACNOR6", "9202103", "5,6867922", "1"]
         ];
 
+        // Test loop
         for($i = 0; $i < count($asset_test_dataset); $i++)
         {
 
+            // Get asset from database
             $asset_controller = new AssetController();
             $asset_test = $asset_controller->getAssetByDate($asset_test_dataset[$i][0], $asset_test_dataset[$i][2]);
             $asset_test = json_decode($asset_test->content(), true);
 
-
+            // Compare values
             $this->assertEquals($asset_test_dataset[$i][0], $asset_test[0]['Asst']);
             $this->assertEquals($asset_test_dataset[$i][1], $asset_test[0]['RptDt']);
             $this->assertEquals($asset_test_dataset[$i][2], $asset_test[0]['date']);
@@ -50,20 +53,24 @@ class VerifyExpectedDataTest extends TestCase
     // Test if the system returns 404 error in case of an invalid asset
     public function test_invalid_asset()
     {
+        // Get asset from database
         $asset_controller = new AssetController();
         $asset_test = $asset_controller->getAssetByDate("fake_asset", "2022-11-22");
         $asset_test = json_decode($asset_test->content(), true);
 
+        // Compare values
         $this->assertEquals([], $asset_test);
     }
 
     // Test if the system is up to date (Note: this test will fail if download command has not been executed)
     public function test_up_to_date()
     {
+        // Get asset from database
         $up_to_date_controller = new UpToDateTrackController();
         $up_to_date_test = $up_to_date_controller->index(1);
         $up_to_date_test = json_decode($up_to_date_test->content(), true);
 
+        // Compare values
         $this->assertEquals(date('Y-m-d'), $up_to_date_test[0]['date']);
     }
 }

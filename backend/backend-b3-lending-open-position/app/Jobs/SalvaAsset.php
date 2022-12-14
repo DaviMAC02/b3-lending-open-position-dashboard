@@ -34,8 +34,12 @@ class SalvaAsset implements ShouldQueue
      */
     public function handle()
     {
+        // Get the asset information from B3
         sleep(2);
+        // URL to get the access token
         $url = 'https://arquivos.b3.com.br/api/download/requestname?fileName=LendingOpenPosition&date='.$this->date.'&recaptchaToken=';
+
+        // Http request options to avoid the 403 error
         $options = array(
             'https'=>array(
             'method'=>"GET",
@@ -52,19 +56,26 @@ class SalvaAsset implements ShouldQueue
             "Upgrade-Insecure-Requests: 1\r\n"
             )
         );
+
+        // Get the access token
         $context = stream_context_create($options);
         $token_return = file_get_contents($url, false, $context);
         $token_json = json_decode($token_return);
         $token = $token_json->token;
+
+        // URL to get the asset information
         $new_url = 'https://arquivos.b3.com.br/api/download/?token='.$token;
         $file = file_get_contents($new_url, false, $context);
         $json_file = explode(';', $file);
+
+
+        // Split the asset information in arrays
+        $assets_array = [];
+        $asset_array = [];
         for ($i=0; $i < count($json_file); $i++) { 
             $json_file[$i] = explode('\r\n', $json_file[$i]);
         }
     
-        $assets_array = [];
-        $asset_array = [];
         for ($i=0; $i < count($json_file); $i++) { 
             if ($i%7 == 0 && $i != 0) {
                 $splited_asset_date = str_replace(array("\n", "\r"), ',', $json_file[$i][0]);
@@ -78,6 +89,7 @@ class SalvaAsset implements ShouldQueue
             array_push($asset_array, $json_file[$i][0]);
         }
     
+        // Save the asset information in the database
         for ($i=1; $i < count($assets_array); $i++) { 
             $asset = new Asset();
             $asset->RptDt = $assets_array[$i][0];

@@ -86,7 +86,7 @@ class SalvaAsset implements ShouldQueue
             $asset->ISIN = $assets_array[$i][3];
             $asset->Asst = $assets_array[$i][4];
             $asset->BalQty = $assets_array[$i][5];
-            $asset->TradAvrgPricTradAvrgPric = $assets_array[$i][6];
+            $asset->TradAvrgPric = $assets_array[$i][6];
             $asset->PricFctr = $assets_array[$i][7];
             $asset->save();
         }

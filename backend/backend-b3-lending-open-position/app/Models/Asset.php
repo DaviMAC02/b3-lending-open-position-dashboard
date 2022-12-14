@@ -15,7 +15,7 @@ class Asset extends Model
         'ISIN',
         'Asst',
         'BalQty',
-        'TradAvrgPricTradAvrgPric',
+        'TradAvrgPric',
         'PricFctr',
     ];
 

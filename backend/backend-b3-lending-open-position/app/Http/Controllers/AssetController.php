@@ -28,5 +28,14 @@ class AssetController extends Controller
         return response()->json($assets);
 
     }
+
+    public function getAssetByDate($asset, $date)
+    {
+        $asset = Asset::where('Asst', $asset)
+            ->where('date', '=', $date)
+            ->get();
+
+        return response()->json($asset);
+    }
     
 }

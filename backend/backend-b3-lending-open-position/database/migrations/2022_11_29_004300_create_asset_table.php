@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('ISIN');
             $table->string('Asst');
             $table->string('BalQty');
-            $table->string('TradAvrgPricTradAvrgPric');
+            $table->string('TradAvrgPric');
             $table->string('PricFctr');
         });
     }

@@ -12,7 +12,7 @@ export default defineComponent({
   name: 'App',
   components: {
     Header,
-    Container
+    Container,
   }
 });
 </script>
@@ -22,9 +22,9 @@ export default defineComponent({
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #1d2632;
   font-family: Nunito, sans-serif;
-  color: black;
+  color: white;
   font-weight: 400;
 
 }

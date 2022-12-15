@@ -1,7 +1,7 @@
 <template>
     <header>  
         <a href="/">
-            <img src="@/assets/logo.svg" alt="logo" />
+            <img src="@/assets/logo.png" alt="logo" />
         </a>
     </header>
 </template>
@@ -26,19 +26,19 @@
 
 <style scoped>
     header{
-        background-color:white;
+        background-color: #1d2632;
         margin: 0 auto;
         padding: 10px 20px;
         width: 100%;
         height: 64px;
-        border-bottom: 1px solid #002c62;
+        border-bottom: 1px solid #2a3544;
         display: flex;
         align-items: left;
     }
     
     img {
-        width: 52px;
-        height: 30px;
+        width: 176px;
+        height: 39px;
         margin: 0 auto;
         display: block;
     }

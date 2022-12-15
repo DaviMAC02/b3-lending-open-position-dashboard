@@ -40,12 +40,6 @@ export default defineComponent({
   components: {
     Bar
   },
-
-  // created(){
-  //   console.log(this.asset_data_date)
-  //   console.log(this.asset_data_bal_qty)
-  // },
-
  
   
   props: {

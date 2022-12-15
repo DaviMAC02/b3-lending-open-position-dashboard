@@ -6,6 +6,8 @@
         <SearchBar v-on:buscar = "buscar"/>
         <ResutltSectionBalance  v-if="!this.asset_data_empty" :asset_data_date = "this.asset_data_date" :asset_data_bal_qty="this.asset_data_bal_qty"/>
         <ResutltSectionPriceAVG v-if="!this.asset_data_empty" :asset_data_date = "this.asset_data_date" :asset_data_tradingAVG="this.asset_data_tradingAVG" />
+        <AssetInfoTable v-if="!this.asset_data_empty" :asset_data_date = "this.asset_data_date" :asset_data_tradingAVG="this.asset_data_tradingAVG" :asset_data_bal_qty="this.asset_data_bal_qty" />
+        <Disclaimer />
     </div>
 </template>
 
@@ -14,7 +16,8 @@ import { defineComponent } from 'vue';
 import SearchBar from './SearchBar.vue';
 import ResutltSectionPriceAVG from './ResultSectionPriceAvg.vue';
 import ResutltSectionBalance from './ResultSectionBalance.vue';
-
+import AssetInfoTable from './AssetInfoTable.vue';
+import Disclaimer from './Disclaimer.vue';
 
 export default defineComponent({
   name: 'Container',
@@ -38,7 +41,7 @@ export default defineComponent({
           asset_data = JSON.parse(JSON.stringify(asset_data))
           this.asset_data_date = asset_data.map((item) => item.date);
           this.asset_data_bal_qty = asset_data.map((item) => item.BalQty);
-          this.asset_data_tradingAVG = asset_data.map((item) => item.TradAvrgPricTradAvrgPric.replace(',','.'));
+          this.asset_data_tradingAVG = asset_data.map((item) => item.TradAvrgPric.replace(',','.'));
           this.asset_data_empty = false;
         }, 200);
 
@@ -46,10 +49,12 @@ export default defineComponent({
   },
 
   components: {
-    SearchBar,  
+    SearchBar,
     ResutltSectionBalance,
-    ResutltSectionPriceAVG
-  },
+    ResutltSectionPriceAVG,
+    AssetInfoTable,
+    Disclaimer
+},
 
   emits: ['buscar']
 });

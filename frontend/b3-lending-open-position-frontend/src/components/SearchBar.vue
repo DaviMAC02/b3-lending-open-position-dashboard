@@ -77,7 +77,7 @@
         width: 120px;
         height: 40px;
         margin: 0 10px;
-        border: 1px solid #002c62;
+        border: 1px solid #2a3544;
         border-radius: 5px;
     }
 
@@ -85,14 +85,14 @@
         width: 100px;
         height: 40px;
         margin: 0 10px;
-        border: 1px solid #002c62;
+        border: 1px solid #242f3d;
         border-radius: 5px;
-        background-color: #002c62;
+        background-color: #1f2533;
         color: #fff;
     }
 
     button:hover{
-        background-color: #002c62;
+        background-color: #111827;
         cursor: pointer;
     }
 </style>

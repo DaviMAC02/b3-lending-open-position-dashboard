@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://jumba.com.br/favicon.png" alt="Jumba" width="200"></a>
+  <a href="https://jumba.com.br/images/logo2.png" alt="Jumba" width="200"></a>
   <br>
   Posições em Aberto de Empréstimo de Ativos
   <br>

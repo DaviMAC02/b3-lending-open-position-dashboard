@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/dados-publicos-de-produtos-listados-e-de-balcao/"><img src="https://www.b3.com.br/lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/img/logo-b3-novo.svg" alt="Jumba" width="200"></a>
+  <a href="https://jumba.com.br/favicon.png" alt="Jumba" width="200"></a>
   <br>
   Posições em Aberto de Empréstimo de Ativos
   <br>
